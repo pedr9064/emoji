@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBATUBA</title>
+    <style>
+        #emoji {
+            width: 200px;
+            height: 200px;
+        }
+
+        .e1 {
+            background-image: url("IMG/e1.png");
+        }
+
+        .e2 {
+            background-image: url("IMG/e2.png");
+        }
+
+        .e3 {
+            background-image: url("IMG/e3.png");
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script>
+        function trocarEmoji(e) { }
+        var obj = document.getElementById("emoji");
+        if (e == 1) {
+            obj.setAttribute("class", "e1");
+        } else if (e == 2) {
+            obj.setAttribute("class", "e2");
+        } else if (e == 2) {
+            obj.setAttribute("class", "e3");
+        }
+        function removeEmoji() {
+            var obj = document.getElementById("emoji");
+            obj.removeAttribute("class");
+        }
+        function verifica() {
+            var obj = document.getElementById("emoji");
+            obj.removeAttribute("class");
+            if (obj.hasAttribute("class")) {
+alert("Atributo class esta na tag");
+            } else {
+                alert("sem atributo class")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="trocaemoji(1)">Emoji 1</button>
+    <button onclick="trocaemoji(2)">Emoji 2</button>
+    <button onclick="trocaemoji(3)">Emoji 3</button>
+    <button onclick="removerEmoji()">Remover Emoji</button>
+    <button onclick="verifica()">Verificar</button>
+    <div id="emoji"></div>
+
+</body>
+
+</html>
